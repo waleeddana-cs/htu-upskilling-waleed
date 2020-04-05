@@ -30,7 +30,7 @@ public class StringCollectorTest {
 
         Map<String, Integer> expectedCases = new HashMap<>();
         expectedCases.put("upper case letters", 6);
-        expectedCases.put("lower case letters", 63);
+        expectedCases.put("lower case letters", 62);
         expectedCases.put("spaces count", 21);
         expectedCases.put("non-word characters", 5);
 
