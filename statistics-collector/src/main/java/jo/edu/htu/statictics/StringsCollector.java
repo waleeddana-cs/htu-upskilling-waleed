@@ -1,13 +1,14 @@
 package jo.edu.htu.statictics;
 
-import java.util.ArrayList;
-
 public class StringsCollector extends Collector<String> {
 
-    void computeStatistics(Iterable<String> cases) {
-        results = new ArrayList<>(4);
-        statistics = new String[]{"upper case letters", "lower case letters", "spaces count", "non-word characters"};
-        valuesOfStatistics = new int[4];
+    @Override
+    protected String[] statisticsNames() {
+        return  new String[]{"upper case letters", "lower case letters", "spaces count", "non-word characters"};
+    }
+
+    protected int[] computeStatistics(Iterable<String> cases) {
+        int[] valuesOfStatistics = new int[4];
 
         for (String aCase : cases) {
             for (int i = 0; i < aCase.length(); i++) {
@@ -21,5 +22,6 @@ public class StringsCollector extends Collector<String> {
                     valuesOfStatistics[3]++;
             }
         }
+        return valuesOfStatistics;
     }
 }

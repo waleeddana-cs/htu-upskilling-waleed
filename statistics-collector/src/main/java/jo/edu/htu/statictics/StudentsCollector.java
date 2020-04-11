@@ -1,13 +1,14 @@
 package jo.edu.htu.statictics;
 
-import java.util.ArrayList;
-
 public class StudentsCollector extends Collector<Student> {
 
-    void computeStatistics(Iterable<Student> cases) {
-        results = new ArrayList<>(6);
-        statistics = new String[]{"CIS major", "Computer Science major", "graduation year <= 2016", "graduation year > 2016", "Males", "Females"};
-        valuesOfStatistics = new int[6];
+    @Override
+    protected String[] statisticsNames() {
+        return new String[]{"CIS major", "Computer Science major", "graduation year <= 2016", "graduation year > 2016", "Males", "Females"};
+    }
+
+    protected int[] computeStatistics(Iterable<Student> cases) {
+        int[] valuesOfStatistics = new int[6];
 
         for (Student aCase : cases) {
             if (aCase.getMajor().equals("CIS"))
@@ -23,5 +24,6 @@ public class StudentsCollector extends Collector<Student> {
             else
                 valuesOfStatistics[5]++;
         }
+        return valuesOfStatistics;
     }
 }
