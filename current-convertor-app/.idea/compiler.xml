@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="currency-convertor-usecases" />
+        <module name="currency-convertor-usecases-impl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="currency-convertor-usecases" target="1.8" />
+      <module name="currency-convertor-usecases-impl" target="1.8" />
+      <module name="current-convertor-app" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
